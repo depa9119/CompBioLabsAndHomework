@@ -21,3 +21,5 @@ Instructions
 6.Slice dough logs into .25in wide rounds and arrange on cookie sheets
 7.Bake in oven for 10 to 12 minutes or until cookies are lightly golden around edges
 8.Let cookies cool on sheets for 1 minute then transfer to cooling rack
+
+yay git
