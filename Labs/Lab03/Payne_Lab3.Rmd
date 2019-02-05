@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Part 1: Basic Operations
+###Part 1: Basic Operations
 ```{r setup, include=FALSE}
 #lab part1 step3
 FlamingHotCheetos <- 5
@@ -23,7 +23,7 @@ guestportion <- .4
 hostportion <- .4
 ```
 
-Part 2: Some practice with objects that hold dta, and some practice using some built-in functions with those objects
+###Part 2: Some practice with objects that hold dta, and some practice using some built-in functions with those objects
 ```{r setup, include=FALSE}
 self_rankings <- c(7, 6, 5, 1, 2, 3, 4)
 penny_rankings <- c(5, 7, 6, 3, 1, 2,  4)
@@ -59,26 +59,26 @@ asmydata <- as.data.frame(rankingstable)
 #str# as.data.frame and data.frame are identical, showing all the data seperated by rows of the guests and columns of the movie.
 #typeof lists both as.data.frame and data.frame as a list type
 ```
-dim(as.data.frame)
-[1] 7 5
-str(data.frame)
-[1] 7 5
+###dim(as.data.frame)
+###[1] 7 5
+###str(data.frame)
+###[1] 7 5
 
 
-str(as.data.frame)
-'data.frame':	7 obs. of  5 variables:
- $ self_rankings  : num  7 6 5 1 2 3 4
- $ penny_rankings : num  5 7 6 3 1 2 4
- $ jenny_rankings : num  4 3 2 7 6 5 1
- $ lenny_rankings : num  1 7 3 4 6 5 2
- $ stewie_rankings: num  6 7 5 4 3 1 2
-str(data.frame)
-'data.frame':	7 obs. of  5 variables:
- $ self_rankings  : num  7 6 5 1 2 3 4
- $ penny_rankings : num  5 7 6 3 1 2 4
- $ jenny_rankings : num  4 3 2 7 6 5 1
- $ lenny_rankings : num  1 7 3 4 6 5 2
- $ stewie_rankings: num  6 7 5 4 3 1 2
+###str(as.data.frame)
+###'data.frame':	7 obs. of  5 variables:
+### $ self_rankings  : num  7 6 5 1 2 3 4
+### $ penny_rankings : num  5 7 6 3 1 2 4
+### $ jenny_rankings : num  4 3 2 7 6 5 1
+### $ lenny_rankings : num  1 7 3 4 6 5 2
+### $ stewie_rankings: num  6 7 5 4 3 1 2
+###str(data.frame)
+###'data.frame':	7 obs. of  5 variables:
+### $ self_rankings  : num  7 6 5 1 2 3 4
+### $ penny_rankings : num  5 7 6 3 1 2 4
+### $ jenny_rankings : num  4 3 2 7 6 5 1
+### $ lenny_rankings : num  1 7 3 4 6 5 2
+### $ stewie_rankings: num  6 7 5 4 3 1 2
 
 
 ```{r setup, include=FALSE}
@@ -88,7 +88,7 @@ rankingstable2 <- as.data.frame(rankingstable, row.names = EpisodeNames)
 ```
 
 
-Accessing elements of matrices and data frames
+###Accessing elements of matrices and data frames
 
 ```{r setup, include=FALSE}
 #third row of matrix from no.10
@@ -135,7 +135,7 @@ rankingstable2["V", "Lenny"] <- rankingstable2["II", "Lenny"]
 rankingstable2["II", "Lenny"] <- undoswitch23
 rankingstable2
 ```
-Access specifc data numbers
+###Access specifc data numbers
 ```{r setup, include=FALSE}
 rankingstable2$Lenny
 #^gives all data under Lenny
