@@ -1,5 +1,5 @@
 ---
-title: "Payne_Lab3.R"
+title: "Payne_Lab3.RMD"
 author: "Deanna Payne"
 date: "1/15/2019"
 output: html_document
