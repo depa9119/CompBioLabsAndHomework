@@ -28,29 +28,29 @@ For example:
 ## 3. Discrete Time Logisitic Growth Model
 Taking old coding from Lab04 (a lab designed to teach writing loops), rewrite to achieve same results but instead design a new function.
 
-#### 141 creation of new function name = "logisticGrowthModel" requiring four arguements
+#141 creation of new function name = "logisticGrowthModel" requiring four arguements
 * 'r' intrinsic growth rate
 * 'K' carrying capacity
 * 'population' starting population size
 * 'generations' passage of time or how many generations
 
-#### 142 creation of new variable **abundance** that creates string of the same number (**population**) repeating specified length of instances (**generations**)
+#142 creation of new variable **abundance** that creates string of the same number (**population**) repeating specified length of instances (**generations**)
 
-#### 143 start of for loop of number of instances defined by generation time
-#### 144 overwriting population (i.e. creation of a new population) with previously provided equation used to find exponential growth of a population as defined by included variables
+#143 start of for loop of number of instances defined by generation time
+#144 overwriting population (i.e. creation of a new population) with previously provided equation used to find exponential growth of a population as defined by included variables
 * **population**
 * **r**
 * **K**
 
 _the overwriting of the population is necessary to find the next population size (n+1) using the previous population size(n) so as to show population of growth over time_
 
-#### 145 new population (n+1) is assigned to new variable= **abundance** for instances of vector [i] in loop
+#145 new population (n+1) is assigned to new variable= **abundance** for instances of vector [i] in loop
 
-#### 147 plot is created using pasage of time (**generations**) on x axis and change in population size (**abundance**) over time on y axis
+#147 plot is created using pasage of time (**generations**) on x axis and change in population size (**abundance**) over time on y axis
 
-#### 148 data table is created with calculated **generations** associated with their defined **abundance**
+#148 data table is created with calculated **generations** associated with their defined **abundance**
 
-#### 149 working directory is set to store where the #148 data set will be sent to and saved in
-#### 150 a csv file is written using table defined in #148 and named "Lab08.csv"
+#149 working directory is set to store where the #148 data set will be sent to and saved in
+#150 a csv file is written using table defined in #148 and named "Lab08.csv"
 
-#### 151 return abudance so as to be read **abundance** data in R console
+#151 return abudance so as to be read **abundance** data in R console
