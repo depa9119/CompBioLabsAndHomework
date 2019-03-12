@@ -1,0 +1,158 @@
+---
+title: "Payne_Lab08"
+author: "Deanna Payne"
+date: "3/7/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+1. Complete Tutorial
+
+italics
+Using _italics_ is not that hard
+
+bold
+**Bolding** words is not that hard
+
+combine bold and italics (doesn't matter order of ** or _)
+Simultaneous use of _**bolded and italicized words**_ is not that hard
+Simultaneous use of **_bolded and italicized words_** is not that hard
+
+Using # to create different sized headers
+#Header 1
+##Header 2
+###Header 3
+####Header 4
+#####Header 5
+######Header 6
+
+Links (2):
+1. inline link: 
+[link text/description](www.link.com)
+
+2. reference link:
+Here's [a link to something else][another place].
+Here's [yet another link][another-link].
+And now back to [the first link][another place].
+
+[another place]: www.github.com
+[another-link]: www.google.com
+
+Images (2): prefaced with !
+1. inline image link
+![alt text: phrase or sentence that describes the image for the visually impaired](www.link.com)
+2. reference link
+![alt text][image tag 1]
+![alt text][image tag 2]
+
+[image tag 1]: (wwww.link.com)
+[image tag 2]: (www.link2.com)
+
+Example reference link image
+![The first father][First Father]
+
+![The second first father][Second Father]
+
+[First Father]: (http://octodex.github.com/images/founding-father.jpg)
+[Second Father]: (http://octodex.github.com/images/foundingfather_v2.png)
+
+Block Quotes
+use ">" preceding text
+>If you need to call special attention to a quote from another source, or design a pull quote for a magazine article, then Markdown's blockquote syntax will be useful. A blockquote is a sentence or paragraph that's been specially formatted to draw attention to the reader.
+
+place > in front of each line of quote. useful for if quote spans multiple paragraphs (inluding breaks)
+> His words seemed to have struck some deep chord in his own nature. Had he spoken
+of himself, of himself as he was or wished to be? Stephen watched his face for some
+moments in silence. A cold sadness was there. He had spoken of himself, of his own
+loneliness which he feared.
+>
+> —Of whom are you speaking? Stephen asked at length.
+>
+> Cranly did not answer.
+
+lists
+unordered list: * to preface each item, must be on its own line
+* Milk
+* Eggs
+* Salmon
+* Butter
+
+ordered list: numbers instead of *
+1. Crack three eggs over a bowl
+2. Pour a gallon of milk into the bowl
+3. Rub the salmon vigorously with butter
+4. Drop the salmon into the egg-milk bowl
+
+sub bullets:indent each * one space more than preceding item
+* Tintin
+ * A reporter
+ * Has poofy orange hair
+ * Friends with the world's most awesome dog
+* Haddock
+ * A sea captain
+ * Has a fantastic beard
+ * Loves whiskey
+   * Possibly also scotch?
+   
+bullet list with context:
+paragraph must start on a line all by itself underneath the bullet point, and it must be indented by at least one space.
+1. Cut the cheese
+  Make sure that the cheese is cut into little triangles.
+
+2. Slice the tomatoes
+  Be careful when holding the knife.
+  For more help on tomato slicing, see Thomas Jefferson's seminal essay _Tom Ate Those_.
+
+Paragraphs
+hard break
+  orig: single straight line
+  Do I contradict myself?
+  Very well then I contradict myself,
+  (I am large, I contain multitudes.)
+  
+  new: insert line 
+  Do I contradict myself?
+
+  Very well then I contradict myself,
+
+  (I am large, I contain multitudes.)
+
+soft break: insert two spaces after each new line
+Do I contradict myself?··
+Very well then I contradict myself,··
+(I am large, I contain multitudes.)
+
+2. Rewrite Readme
+Done
+
+3.
+**Turn the logistic growth model code into a function that takes `r` (the intrinsic growth rate), `K` (the carrying capacity), and the initial population size as its arguments.**
+
+n[t] = n[t-1] + ( r * n[t-1] * (K - n[t-1])/K )
+_r ~ intrinsic growth rate_
+_K ~ carrying capacity_
+_population ~ initial population_
+_generations ~ time or sequence of generations_
+
+```{r}
+#function
+logisticGrowthModel <- function(r, K, population, generations) {
+  abundance <- rep(population, length(generations))
+  for (i in generations) {
+    population <- population +  r * population * ((K - population)/K)
+    abundance[i] <- population
+  }
+  plot(generations, abundance)
+  myResults <- cbind(generations, abundance)
+  setwd("/Users/deannagallegospayne/CompBio/CompBioLabsAndHomework/Labs/Lab08")
+  write.csv(x = myResults, file = "Lab08.csv")
+  return(abundance)
+}
+```
+###arguements pulled from Payne_Lab04.R
+```{r}
+#try function
+logisticGrowthModel(.8, 10000, 2500, seq(1:12))
+```
