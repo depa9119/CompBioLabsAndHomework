@@ -41,6 +41,7 @@ Taking old coding from Lab04 (a lab designed to teach writing loops), rewrite to
 * **population**
 * **r**
 * **K**
+
 _the overwriting of the population is necessary to find the next population size (n+1) using the previous population size(n) so as to show population of growth over time_
 
 #### 145 new population (n+1) is assigned to new variable= **abundance** for instances of vector [i] in loop
