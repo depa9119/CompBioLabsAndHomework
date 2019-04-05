@@ -29,7 +29,9 @@ WoodData.5.1 <- WoodData.noNA %>%
   group_by(Family, Binomial) %>%
   summarize(value = mean(Wood.density))
 
-#####
+
+
+#####Doesnt Work
 WoodData.5.2 <- for( i in 1:length(WoodData.noNA)) {
   unique(WoodData.noNA$Binomial[i])
   WoodData.noNA$Wood.density <- mean(WoodData.noNA$Wood.density)
