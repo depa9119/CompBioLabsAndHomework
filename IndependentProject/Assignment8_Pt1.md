@@ -67,7 +67,7 @@ Due to the nature of wild capture and release, data entry for each individual ra
          + total number of cestode eggs
          + total number of nematode eggs
          + total number of nematodes
-            * covariates (change in length/body condition index)
-            * days since previous treatment/control
+    * covariates (change in length/body condition index)
+    * days since previous treatment/control
 6. Linear Mixed Effect Model with random effect of individual to account for same mouse at repeated captures over the course of trapping sessions.
 7. Anova test for best fit of data against change in BCI, best fit data provided by Akaike information criterion (AIC)
