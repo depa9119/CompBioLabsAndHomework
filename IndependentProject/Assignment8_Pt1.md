@@ -41,31 +41,33 @@ Due to the nature of wild capture and release, data entry for each individual ra
 
 ## Detailed Description of Analysis to be Done and Challenges Involved
 ### Challenges
-How to define good health vs bad health?
-    Creating code to analyze body condition/health
-    Health differences due to gender, age, reproductively active? 
-        Ectoparastic data is also available so do I seperate individuals with ectoparasites? How do ectoparasites affect health? Do I ignore it altogether?
-    Some individuals are labeled pregnant. Does pregnancy affect endoparasites? What about lactation/Visible nipples? 
-    How does anti-helminthic solution change body condition? How does it change parasite load? Does change in parasite load lead to change in body condition?
-Analysis of Endoparasites
-    Do I analyze each species differently? Together?
-   How do I seperate effects due to a single species if there are simultaneous infection of multiple species?
-How do I approach data points?
-    Do I take each single capture as individual data points or do I follow the same individuals over the course of a pre-specified amount of time?
++ How to define good health vs bad health?:
+    * Creating code to analyze body condition/health
+    * Health differences due to gender, age, reproductively active? 
+    * Ectoparastic data is also available so do I seperate individuals with ectoparasites? How do ectoparasites affect health? Do I ignore it altogether?
+    * Some individuals are labeled pregnant. Does pregnancy affect endoparasites? What about lactation/Visible nipples? 
+    * How does anti-helminthic solution change body condition? How does it change parasite load? Does change in parasite load lead to change in body condition?
+
++ Analysis of Endoparasites
+    * Do I analyze each species differently? Together?
+    * How do I seperate effects due to a single species if there are simultaneous infection of multiple species?
+
++ How do I approach data points?
+    * Do I take each single capture as individual data points or do I follow the same individuals over the course of a pre-specified amount of time?
 
 ### Analysis
 1. Create code to list new category of body condition index (BCI) of each mouse individual as defined by Pieg, Jordi, Green 2009 to analyze health instead of body size.
 2.  Subset each of the two species
 3. Subset gender
 4. Subset age groups
-        -Subset reproductively mature in the adults
+    * Subset reproductively mature in the adults
 5. Independent predictors: 
-        -total number of intestinal parasitic eggs (per gram of feces)
-                total number of coccidia oocytes
-                total number of cestode eggs
-                total number of nematode eggs
-                total number of nematodes
-        -covariates (change in length/body condition index)
-        -days since previous treatment/control
+    * total number of intestinal parasitic eggs (per gram of feces)
+         + total number of coccidia oocytes
+         + total number of cestode eggs
+         + total number of nematode eggs
+         + total number of nematodes
+            * covariates (change in length/body condition index)
+            * days since previous treatment/control
 6. Linear Mixed Effect Model with random effect of individual to account for same mouse at repeated captures over the course of trapping sessions.
 7. Anova test for best fit of data against change in BCI, best fit data provided by Akaike information criterion (AIC)
