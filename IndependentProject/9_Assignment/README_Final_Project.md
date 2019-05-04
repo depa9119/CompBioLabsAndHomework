@@ -178,7 +178,7 @@ I expected to see a direct correlation between number of parasites and BCI. Howe
 ![Graph1.Zoom1.pdf](https://github.com/depa9119/CompBioLabsAndHomework/blob/master/IndependentProject/9_Assignment/Graph1.Zoom1.pdf)
 
 Even though there was a insignificant relationship between any tested variables variables, there was a common stronger significance between Cestodes, Nematodes and Treatment (i.e. p values were less than 0.1 but greater than 0.05). This is not unexpected as treatment is anti-helminthic solution, but if treatment and thus reduction of nematode/cestode parasites does not reduce parasite load substantially so as to influence BCI (as the medication's original purpose) this might indicate that experimental protocal may be flawed. Despite this stronger relationship if still insignificant, no obvious trend in Graph2.
-![Graph2.Zoom2.pdf](Graph2.Zoom2.pdf)
+![Graph2.Zoom2.pdf](https://github.com/depa9119/CompBioLabsAndHomework/blob/master/IndependentProject/9_Assignment/Graph2.Zoom2.pdf)
 
 However, further research is needed to confirm these findings. Specifically, due to the low number of individuals caught as juveniles and subadults in comparison adults issues corresponding to small sample size might influence data. Future research may focus on the trap and recapture of the youngest ages with modified protocol for shorter times for trapping between field sites to account for fast growth rate of young mice. 
 
