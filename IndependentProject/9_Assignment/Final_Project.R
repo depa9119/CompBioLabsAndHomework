@@ -104,38 +104,38 @@ c(tally(PL_Adults), tally(PL_SubAdults), tally(PL_Juvenile))
 
 ##Allindv P.maniculatus 
 ### Total Intestinal Parasites (aka Total Endoparasites "EndoTots") 
-PM_EndoTots_w.categorical <- aov(BCI_total~Endo.Total.Egg.g*Treated.or.control*days.since.previous.treatment.ctl, data = P.maniculatus)
+PM_EndoTots_w.categorical <- aov(BCI_total~Endo.Total.Egg.g*Treated.or.control , data = P.maniculatus)
 print(summary(PM_EndoTots_w.categorical))
 
-PM_EndoTots_wo.categorical <- aov(BCI_total~Endo.Total.Egg.g+Treated.or.control+days.since.previous.treatment.ctl, data = P.maniculatus)
+PM_EndoTots_wo.categorical <- aov(BCI_total~Endo.Total.Egg.g+Treated.or.control  , data = P.maniculatus)
 print(summary(PM_EndoTots_wo.categorical))
 
 print(anova(PM_EndoTots_w.categorical, PM_EndoTots_wo.categorical))
 
 ###Species of Intestinal Parasites (aka types of Endoparasites "Endotypes")
-PM_Endotypes_w.categorical <- aov(BCI_total~Cocc.Egg.g*Nem.Egg.g*Cestode.Egg.g*Treated.or.control*days.since.previous.treatment.ctl, data = P.maniculatus)
+PM_Endotypes_w.categorical <- aov(BCI_total~Cocc.Egg.g*Nem.Egg.g*Cestode.Egg.g*Treated.or.control , data = P.maniculatus)
 print(summary(PM_Endotypes_w.categorical))
 
-PM_Endotypes_wo.categorical <- aov(BCI_total~Cocc.Egg.g+Nem.Egg.g+Cestode.Egg.g+Treated.or.control+days.since.previous.treatment.ctl, data = P.maniculatus)
+PM_Endotypes_wo.categorical <- aov(BCI_total~Cocc.Egg.g+Nem.Egg.g+Cestode.Egg.g+Treated.or.control  , data = P.maniculatus)
 print(summary(PM_Endotypes_wo.categorical))
 
 print(anova(PM_Endotypes_w.categorical, PM_Endotypes_wo.categorical))
 
 ##All indv P.maniculatus 
 ### Total Intestinal Parasites (aka Total Endoparasites "EndoTots") 
-PL_EndoTots_w.categorical <- aov(BCI_total~Endo.Total.Egg.g*Treated.or.control*days.since.previous.treatment.ctl, data = P.leucopus)
+PL_EndoTots_w.categorical <- aov(BCI_total~Endo.Total.Egg.g*Treated.or.control, data = P.leucopus)
 print(summary(PL_EndoTots_w.categorical))
 
-PL_EndoTots_wo.categorical <- aov(BCI_total~Endo.Total.Egg.g+Treated.or.control+days.since.previous.treatment.ctl, data = P.leucopus)
+PL_EndoTots_wo.categorical <- aov(BCI_total~Endo.Total.Egg.g+Treated.or.control, data = P.leucopus)
 print(summary(PL_EndoTots_wo.categorical))
 
 print(anova(PL_EndoTots_w.categorical, PL_EndoTots_wo.categorical))
 
 ###Species of Intestinal Parasites (aka types of Endoparasites "Endotypes")
-PL_Endotypes_w.categorical <- aov(BCI_total~Cocc.Egg.g*Nem.Egg.g*Cestode.Egg.g*Treated.or.control*days.since.previous.treatment.ctl, data = P.leucopus)
+PL_Endotypes_w.categorical <- aov(BCI_total~Cocc.Egg.g*Nem.Egg.g*Cestode.Egg.g*Treated.or.control, data = P.leucopus)
 print(summary(PL_Endotypes_w.categorical))
 
-PL_Endotypes_wo.categorical <- aov(BCI_total~Cocc.Egg.g+Nem.Egg.g+Cestode.Egg.g+Treated.or.control+days.since.previous.treatment.ctl, data = P.leucopus)
+PL_Endotypes_wo.categorical <- aov(BCI_total~Cocc.Egg.g+Nem.Egg.g+Cestode.Egg.g+Treated.or.control, data = P.leucopus)
 print(summary(PL_Endotypes_wo.categorical))
 
 print(anova(PL_Endotypes_w.categorical, PL_Endotypes_wo.categorical))
@@ -177,5 +177,21 @@ anova(PL_EndoTots_w.categorical_Juveniles, PL_EndoTots_wo.categorical_Juveniles)
 PL_Endotypes_w.categorical_SubAdults <- aov(BCI_total~Cocc.Egg.g*Nem.Egg.g*Cestode.Egg.g*Treated.or.control, data = PL_SubAdults)
 print(summary(PL_Endotypes_w.categorical_SubAdults))
 PL_Endotypes_wo.categorical_SubAdults <- aov(BCI_total~Cocc.Egg.g+Nem.Egg.g+Cestode.Egg.g+Treated.or.control, data = PL_SubAdults)
-print(summary(PL_Endotypes_wo.categorical_Adults))
+print(summary(PL_Endotypes_wo.categorical_SubAdults))
 anova(PL_Endotypes_w.categorical_SubAdults, PL_Endotypes_wo.categorical_SubAdults)
+
+
+##Graphs
+
+PL_Graph1_BCI.EndoTot <- ggplot(P.leucopus, aes(x=Endo.Total.Egg.g, y=BCI_total, col = as.factor (Age))) + geom_point()+ xlim(0, 50000) + ggtitle("Graph1: P.leucopus~ BCI v EndoTot") + xlab("Total Endoparasites (per gram feces)") + ylab("BCI")
+PL_Graph1_BCI.EndoTot
+PL_Graph1_BCI.EndoTot_Zoom1 <- ggplot(P.leucopus, aes(x=Endo.Total.Egg.g, y=BCI_total, col = as.factor (Age))) + geom_point() + xlim(0, 50000) + ggtitle("Graph1: P.leucopus~ BCI v EndoTot") + xlab("Total Endoparasites (per gram feces)") + ylab("BCI")
+PL_Graph1_BCI.EndoTot_Zoom1
+
+
+PL_Graph2_BCI.Nem <- ggplot(P.leucopus, aes(x=Nem.Egg.g, y=BCI_total, col = as.factor (Treated.or.control)))+ geom_point()+ xlim(0, 15000) + ggtitle("Graph2: P.leucopus~ BCI v Nematodes") + xlab("Total Nematodes (per gram feces)") + ylab("BCI")
+PL_Graph2_BCI.Nem
+PL_Graph2_BCI.Nem_Zoom1 <- ggplot(Graph3, aes(x=Nem.Egg.g, y=BCI_total, col = as.factor (Treated.or.control)))+ geom_point()+ xlim(0, 5000) + ggtitle("Graph2: P.leucopus~ BCI v Nematodes") + xlab("Total Nematodes (per gram feces)") + ylab("BCI")
+PL_Graph2_BCI.Nem_Zoom1
+PL_Graph2_BCI.Nem_Zoom2 <- ggplot(Graph3, aes(x=Nem.Egg.g, y=BCI_total, col = as.factor (Treated.or.control)))+ geom_point()+ xlim(0, 1000) + ggtitle("Graph2: P.leucopus~ BCI v Nematodes") + xlab("Total Nematodes (per gram feces)") + ylab("BCI")
+PL_Graph2_BCI.Nem_Zoom2
