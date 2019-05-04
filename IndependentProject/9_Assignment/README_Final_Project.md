@@ -172,9 +172,15 @@ There is close significance between treatment groups and BCI (p = 0.0664).
 Anova test between the above two models indicate no interaction of the variables. i.e. relationship is insiginficant confirming above results.
 
 ## Conclusions
-Contrary to my initial expectations that a single demographic will have trends towards parasite infection, I found no evidence that niether Age nor Species have any significant relationship to parasite load (quantities of parasites) or parasite types (Coccidia, Nematodes, Cestodes). However, further research is needed to confirm these findings. Specifically, due to the low number of individuals caught as juveniles and subadults in comparison adults, future research may focus on trap and recapture of the youngest ages only with modified protocol for shorter times for trapping between field sites to account for fast growth rate of young mice. 
+Contrary to my initial expectations BCI will be affected by endoparasites and that a single demographic will have trends towards parasite infection, I found no evidence that niether Age nor Species have any significant relationship to parasite load (quantities of parasites) or parasite types (Coccidia, Nematodes, Cestodes). 
 
-In addition, a common trend was between Cestodes, Nematodes and Treatment. Even though there was a insignificant relationship between these variables, this combination showed the strongest significance in comparison to other variables. This is not unexpected as treatment is anti-helminthic solution, but if treatment and thus reduction of nematode/cestode parasites does not reduce parasite load substantially so as to influence BCI this might indicate that experimental protocal may be flawed.
+I expected to see a direct correlation between number of parasites and BCI. However, as seen in the data and in Graph1, there is no obvious trend between Endoparasites and BCI. In addition, there is no relationship between young age and increased parasite load as seen by no grouping of similar colors.
+![Graph1.Zoom1.pdf](https://github.com/depa9119/CompBioLabsAndHomework/blob/master/IndependentProject/9_Assignment/Graph1.Zoom1.pdf)
+
+Even though there was a insignificant relationship between any tested variables variables, there was a common stronger significance between Cestodes, Nematodes and Treatment (i.e. p values were less than 0.1 but greater than 0.05). This is not unexpected as treatment is anti-helminthic solution, but if treatment and thus reduction of nematode/cestode parasites does not reduce parasite load substantially so as to influence BCI (as the medication's original purpose) this might indicate that experimental protocal may be flawed. Despite this stronger relationship if still insignificant, no obvious trend in Graph2.
+![Graph2.Zoom2.pdf](https://github.com/depa9119/CompBioLabsAndHomework/blob/master/IndependentProject/9_Assignment/Graph2.Zoom2.pdf)
+
+However, further research is needed to confirm these findings. Specifically, due to the low number of individuals caught as juveniles and subadults in comparison adults issues corresponding to small sample size might influence data. Future research may focus on the trap and recapture of the youngest ages with modified protocol for shorter times for trapping between field sites to account for fast growth rate of young mice. 
 
 ## Works Cited
 “Intestinal Worms” World Health Organization
