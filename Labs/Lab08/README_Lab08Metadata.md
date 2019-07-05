@@ -53,4 +53,4 @@ _the overwriting of the population is necessary to find the next population size
 #149 working directory is set to store where the #148 data set will be sent to and saved in
 #150 a csv file is written using table defined in #148 and named "Lab08.csv"
 
-#151 return abudance so as to be read **abundance** data in R console
+#151 return abundance so as to be read **abundance** data in R console
